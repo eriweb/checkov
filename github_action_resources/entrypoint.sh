@@ -183,6 +183,7 @@ if [ -n "$GITHUB_OVERRIDE_URL" ] && [ "$GITHUB_OVERRIDE_URL" = "true" ]; then
   git config --global url."https://x-access-token:${GITHUB_PAT}@github.com/".insteadOf "https://github.com/"
   git config --global --add url."https://x-access-token:${GITHUB_PAT}@github.com/".insteadOf "git@github.com:"
   git config --global --add url."https://x-access-token:${GITHUB_PAT}@github.com/".insteadOf "git::ssh://git@github.com/"
+  git config --global --add url."https://x-access-token:${GITHUB_PAT}@github.com/".insteadOf "ssh://git@github.com/"
 fi
 
 ## DEBUG: TODO: REMOVE ME
