@@ -186,10 +186,6 @@ if [ -n "$GITHUB_OVERRIDE_URL" ] && [ "$GITHUB_OVERRIDE_URL" = "true" ]; then
   git config --global --add url."https://x-access-token:${GITHUB_PAT}@github.com/".insteadOf "ssh://git@github.com/"
 fi
 
-## DEBUG: TODO: REMOVE ME
-echo "Git config:"
-cat ~/.gitconfig
-
 # If Docker image is used, default to that
 if [ -n "$INPUT_DOCKER_IMAGE" ]; then
   DOCKER_IMAGE_FLAG="--docker-image $INPUT_DOCKER_IMAGE"
